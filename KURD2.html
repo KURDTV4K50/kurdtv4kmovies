@@ -1,0 +1,304 @@
+<!DOCTYPE html>  
+<html lang="ku">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>KURD TV 4K MOVIES</title>  
+  <style>  
+    body {  
+      background: #111;  
+      color: #fff;  
+      font-family: Arial, sans-serif;  
+      margin: 0;  
+      padding: 0;  
+    }  
+    header {  
+      background: #222;  
+      padding: 15px;  
+      display: flex;  
+      align-items: center;  
+      gap: 10px;  
+    }  
+    header img {  
+      height: 40px;  
+    }  
+    header h1 {  
+      font-size: 20px;  
+    }  
+    .movies {  
+      display: grid;  
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+      gap: 20px;  
+      padding: 20px;  
+    }  
+    .movie {  
+      background: #222;  
+      padding: 10px;  
+      border-radius: 12px;  
+      cursor: pointer;  
+      text-align: center;  
+      transition: transform 0.2s;  
+    }  
+    .movie:hover {  
+      transform: scale(1.05);  
+      background: #333;  
+    }  
+    .movie img {  
+      width: 100%;  
+      border-radius: 10px;  
+    }  
+    .movie h3 {  
+      margin: 10px 0 5px;  
+    }  
+    /* Modal */  
+    .modal {  
+      display: none;  
+      position: fixed;  
+      inset: 0;  
+      background: rgba(0,0,0,0.8);  
+      justify-content: center;  
+      align-items: center;  
+      z-index: 1000;  
+    }  
+    .modal-content {  
+      background: #222;  
+      padding: 20px;  
+      border-radius: 12px;  
+      width: 90%;  
+      max-width: 800px;  
+      position: relative; /* بۆ شوێنی close */  
+    }  
+    .modal-content h2 {  
+      margin-top: 0;  
+    }  
+    iframe {  
+      width: 100%;  
+      height: 400px;  
+      border: none;  
+      border-radius: 12px;  
+      margin-top: 10px;  
+    }  
+    .close {  
+      position: absolute;  
+      top: 10px;  
+      right: 15px;  
+      cursor: pointer;  
+      font-size: 24px;  
+      font-weight: bold;  
+      color: red;  
+    }  
+    .close:hover {  
+      color: #ff6666;  
+    }  
+    .servers {  
+      margin: 10px 0;  
+      display: flex;  
+      gap: 10px;  
+      flex-wrap: wrap;  
+    }  
+    .servers button {  
+      background: #444;  
+      border: none;  
+      color: #fff;  
+      padding: 8px 14px;  
+      border-radius: 8px;  
+      cursor: pointer;  
+    }  
+    .servers button:hover {  
+      background: #666;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <header>  
+    <img src="https://i.postimg.cc/QtKnvR4n/Picsart-25-07-19-15-16-27-630.png" alt="Logo">  
+    <h1>KURD TV 4K MOVIES</h1>  
+  </header>  
+  
+  <section class="movies">  
+    <!-- Movie 1 -->  
+    <div class="movie" onclick="openModal('ELEVATION','⭐ 10/5.6',  
+      'باوکێکی تەنها و دوو ئافرەت لە سەلامەتی ماڵەکانیانەوە بۆ ڕووبەڕووبوونەوەی بوونەوەرە دڕنده‌كان بۆ ڕزگارکردنی ژیانی کوڕێکی گەنج',  
+      [  
+        {name:'سێرڤەر 1', url:'https://drive.google.com/file/d/1n7H_i590JVqI4gnScAoAYJPZ5JTZdCE4/preview'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BY2NiNDM0NWYtNzQxNi00NmY1LTg1YmYtMDE5ZmQzMGJlMGQzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 1">  
+      <h3>ELEVATION</h3>  
+    </div>  
+      
+    <!-- Movie 2 -->  
+    <div class="movie" onclick="openModal('PLANE 2023','⭐ 10/6.8',  
+      'فڕۆكه‌وانێك خۆی له‌ ناوچه‌یه‌كی جه‌نگ ده‌بینێته‌وه‌ دوای ئه‌وه‌ی ناچار ده‌بێت فڕۆكه‌كه‌ی بنیشێنته‌وه‌ له‌كاتی بۆرانێكی به‌هێز',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10022130027095'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BNDAyYjZmNjctOWE2Mi00ZDBiLWE2YjEtMWM1YmM0NmYzOGQwXkEyXkFqcGc@._V1_.jpg" alt="Movie 2">  
+      <h3>PLANE 2023</h3>  
+    </div>  
+      
+    <!-- Movie 3 -->  
+    <div class="movie" onclick="openModal('WARFARE 2025','⭐ 10/7.5',  
+      'لە چیرۆکێکی ڕاستییەوە وەرگیراوە گروپێکی سەربازی تایبەتی ئەمێریکا ئەرکێکی چاودێری مەترسیداریان پێ دەدرێت لە شاری ڕوماد لە عێراق. بەڵام ئەرکەکەیان بە هەڵەدا دەڕوات',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10022377097815'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/S/pv-target-images/f908bc11859536e64bbdbcb8dddec2b47f781bd0953355f5be8d479fd0fde921.jpg" alt="WARFARE 2025">  
+      <h3>WARFARE 2025</h3>  
+    </div>  
+  
+    <!-- Movie 4 -->  
+    <div class="movie" onclick="openModal('TRANSFORMERS 2023','⭐ 10/7.0',  
+      'لە ماوەی ساڵانی نەوەدەکان، کۆمەڵەیەکی نوێی خۆگۆڕەکان کە ناسراون بە ماکسیماڵەکان دەبنە هاوپەیمانی ئۆتۆبۆتەکان بۆ پاراستنی زەوی لە هەڕەشەیەکی گەورە',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10025196194391'},  
+      ])">  
+      <img src="https://preview.redd.it/its-been-over-a-year-since-transformers-rise-of-the-beast-v0-izo37iyf9vud1.jpeg?width=640&crop=smart&auto=webp&s=1c033cfccbdbf26697806b18ade95e87006b28fe" alt="TRANSFORMERS 2023">  
+      <h3>TRANSFORMERS 2023</h3>  
+    </div>  
+    
+    <!-- Movie 5 -->  
+    <div class="movie" onclick="openModal('saving private ryan (1998)','⭐ 10/8.6',  
+      'لە کاتی جەنگی جیهنای دووەم و دوابەدوای دابەزین لە نۆرماندی، گروپێک لە سەربازانی ئەمەریکی سنووری دوژمن تێدەپەڕێنن بۆ گێڕانەوەی ئەفسەرێکی یەکە ئاسمانیەکانیان کە براکەی لە ئۆپەراسیۆنێکدا کوژراوە.',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10028335172183'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BZGZhZGQ1ZWUtZTZjYS00MDJhLWFkYjctN2ZlYjE5NWYwZDM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Movie 1">  
+      <h3>saving private ryan (1998)</h3>  
+    </div>  
+    
+    <!-- Movie 6 -->  
+    <div class="movie" onclick="openModal('IP MAN 1','⭐ 10/8.0',  
+      'باس لە چیرۆکی مامۆستای ئەفسانە (ئیپ مان) دەکات، ئەو کەسەی هونەری جەنگی وین چونی دەوتەوە و مامۆستای بڕوسلی بوو.',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10028335172183'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BZmJjZDE0MmYtNzgwYy00NTg2LWE0NDYtNzA0YTA4MjA0NmYxXkEyXkFqcGc@._V1_.jpg" alt="Movie 1">  
+      <h3>IP MAN 1</h3>  
+    </div>  
+    
+    <!-- Movie 7 -->  
+    <div class="movie" onclick="openModal('IP MAN 2','⭐ 10/7.6',  
+      'چیڕۆکی فیلمەکە باس لە ساڵی ١٩٤٩ و گەشتەکەی یپ مان دەکات بۆ هۆنگ کۆنگ کە هەوڵدەدات هونەری وینگ چوون بڵاو بکاتەوە.',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10028335172183'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BYzEzYTBmYjgtNjQzMi00YmNiLTkyZGItOGFhMzEzOWY3MjI4XkEyXkFqcGc@._V1_.jpg" alt="Movie 1">  
+      <h3>IP MAN 2</h3>  
+    </div>  
+    
+    <!-- Movie 8 -->  
+    <div class="movie" onclick="openModal('IP MAN 3','⭐ 10/7.2',  
+      'دوای ئەوەی گروپێکی بازرگانی تایبەت بە خانووبەرە دێن بۆ هۆنک گۆنک و ژیانی هاوڵاتیان هەراسان دەکەن مامۆستا یپ ناچار دەبێت ڕوو بە ڕوویان بێتەوە و لە هەمان کاتدا کەسێک پەیدا ئەبێت کە سوکایەتی بە یپ دەکات و بانگەزای ئەوە ئەکات کە ئەو ( وینگ چون )ەی یپ شەڕی پێدەکات ڕاستەقینە نیە.',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10028335172183'},  
+      ])">  
+      <img src="https://resizing.flixster.com/XzcWWgTo9r7Ddn9bY-UBFs0n67o=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzk4ZjQ2NzA3LTJiZDctNDc0My1hYWQxLTVkZTRlNjI3MDE0Yi53ZWJw" alt="Movie 1">  
+      <h3>IP MAN 3</h3>  
+    </div>  
+    
+    <!-- Movie 9 -->  
+    <div class="movie" onclick="openModal('IP MAN 4','⭐ 10/7.1',  
+      '(ئیپ مان) گەشت ئەکات بۆ ویلایەتە یەکگرتووەکانی ئەمریکا بۆ بینینی قوتابیەکەی (بروس لی) لە پێشبڕکێی کاراتی جیهانی کە ئەمەش بووەتە هۆی بێزارکردنی مامۆستا چینیەکانی ئەمریکا دژایەتی کردنی هێزی دەریایی ئەمریکا لەلایەکی ترەوە بۆیە ئەبێت ئیپ مان.',  
+      [  
+        {name:'سێرڤەر 1', url:'https://ok.ru/videoembed/10028335172183'},  
+      ])">  
+      <img src="https://m.media-amazon.com/images/M/MV5BOGVjMDEzNjMtMWJmMy00NDdjLWFkMzItOTBhZTE3OWU0YmM4XkEyXkFqcGc@._V1_.jpg" alt="Movie 1">  
+      <h3>IP MAN 4</h3>  
+    </div>  
+    
+     <!-- Serise 1 -->
+    <div class="movie" onclick="openModal('BREKING BAD SESSON 1','⭐ 9.5',
+      'زنجیرەی بەناوبانگی BREKING BAD کە لەسەر جیانی باوکی مامۆستای کیمیا دەچێت کە بە تەنیا دەستی پێدەکات بە فڕۆشتنی مێتافێتامینی کریستال بۆ پارە بەدەست هێنان.',
+      [
+        {name:'ئەڵقەی 1', url:'https://drive.google.com/file/d/1OI_3HIM-vhS-YKpRluMIGpbqf7walWCH/preview'},
+        {name:'ئەڵقەی 2', url:'https://drive.google.com/file/d/1RixTe6s3DmyYv2xYeZyO0ms_7jNIVe-j/preview'},
+        {name:'ئەڵقەی 3', url:'https://drive.google.com/file/d/1F3BD3r4350MROlK2he2VNdKFzn9dQ1Nt/preview'},
+        {name:'ئەڵقەی 4', url:'https://drive.google.com/file/d/1mIV8PQT4b0UX8P42pgI5-KmIA_ydAZqP/preview'},
+        {name:'ئەڵقەی 5', url:'https://drive.google.com/file/d/1Z-XBAOaxzccHjsRmpp7yt1CpNqnCnmlN/preview'},
+        {name:'ئەڵقەی 6', url:'https://drive.google.com/file/d/1XCs4QnSU60rgIcrklGtAoc-6Q7SIOIXA/preview'},
+        {name:'ئەڵقەی 7', url:'https://drive.google.com/file/d/1YMzfdVOcJzgLBs7bhsaTiT8yEabvFpiT/preview'},
+        {name:'ئەڵقەی 8', url:'https://drive.google.com/file/d/1K3U-p-fdBVG5oDZU5ldBJuL0x82A2-sp/preview'},
+        {name:'ئەڵقەی 9', url:'https://drive.google.com/file/d/1-ZLohz91kqX4S2A6uTEm304RpZASDQg8/preview'}
+      ])">
+      <img src="https://resizing.flixster.com/EEM4xDSyN8QtmrWwYJsFE84GwOg=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vUlRUVjYyNjE3LndlYnA=" alt="BREKING BAD">
+      <h3>BREKING BAD SESSON 1</h3>
+    </div>
+  </section>  
+  
+  <!-- Modal -->  
+  <div id="movieModal" class="modal">  
+    <div class="modal-content">  
+      <span class="close" onclick="closeModal()">✖</span>  
+      <h2 id="movieTitle"></h2>  
+      <p id="movieRating"></p>  
+      <p id="movieStory"></p>  
+  
+      <div class="servers" id="serverButtons"></div>  
+  
+      <iframe id="moviePlayer" allowfullscreen></iframe>  
+    </div>  
+  </div>  
+  
+  <script>  
+    let servers = [];  
+    let currentServerIndex = 0;  
+
+    function openModal(title, rating, story, serverList) {  
+      document.getElementById("movieTitle").textContent = title;  
+      document.getElementById("movieRating").textContent = rating;  
+      document.getElementById("movieStory").textContent = story;  
+
+      servers = serverList;  
+
+      const serverDiv = document.getElementById("serverButtons");  
+      serverDiv.innerHTML = "";  
+
+      servers.forEach((s, i) => {  
+        const btn = document.createElement("button");  
+        btn.textContent = s.name;  
+        btn.onclick = () => changeServer(i);  
+        serverDiv.appendChild(btn);  
+      });  
+
+      document.getElementById("moviePlayer").src = servers[0].url;  
+      document.getElementById("movieModal").style.display = "flex";  
+
+      const buttons = serverDiv.querySelectorAll("button");  
+      if (buttons.length > 0) {  
+        currentServerIndex = 0;  
+        buttons[0].focus();  
+      }  
+    }  
+
+    function changeServer(num) {  
+      document.getElementById("moviePlayer").src = servers[num].url;  
+      currentServerIndex = num;  
+    }  
+
+    function closeModal() {  
+      document.getElementById("movieModal").style.display = "none";  
+      document.getElementById("moviePlayer").src = "";  
+    }  
+
+    // کۆتڕۆڵی تیڤی  
+    document.addEventListener("keydown", (e) => {  
+      const modal = document.getElementById("movieModal");  
+      if (modal.style.display !== "flex") return;  
+
+      const buttons = document.querySelectorAll("#serverButtons button");  
+      if (buttons.length === 0) return;  
+
+      if (e.key === "ArrowRight") {  
+        currentServerIndex = (currentServerIndex + 1) % buttons.length;  
+        buttons[currentServerIndex].focus();  
+      } else if (e.key === "ArrowLeft") {  
+        currentServerIndex = (currentServerIndex - 1 + buttons.length) % buttons.length;  
+        buttons[currentServerIndex].focus();  
+      } else if (e.key === "Enter") {  
+        buttons[currentServerIndex].click();  
+      } else if (e.key === "Escape" || e.key === "Backspace") {  
+        closeModal();  
+      }  
+    });  
+  </script>  
+</body>  
+</html>
